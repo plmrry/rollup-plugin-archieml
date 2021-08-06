@@ -26,10 +26,8 @@
   },
   "scripts": {
     "build": "npx tsc && rollup -c",
-    "prebuild": "rm -rf dist",
-    "prepare": "npm run build",
-    "prepublish": "npm run build",
-    "pretest": "npm run build",
+    "prepare": "rm -rf dist && npm run build",
+    "pretest": "npm run prepare",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "release": "npm publish"
   },
