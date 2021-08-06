@@ -28,25 +28,24 @@
     "build": "npx tsc && rollup -c",
     "prepare": "rm -rf dist && npm run build",
     "pretest": "npm run prepare",
-    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
-    "release": "npm publish"
+    "release": "npm publish",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
   },
   "files": [
     "dist",
     "README.md"
   ],
   "dependencies": {
-    "@rollup/pluginutils": "^3.1.0",
-    "archieml": ">=0.4.x"
+    "@rollup/pluginutils": ">=3",
+    "archieml": ">=0.4"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.15.0",
-    "@types/node": "^16.4.13",
-    "eslint": "^7.32.0",
-    "eslint-plugin-jest": "^24.4.0",
-    "jest": "^27.0.6",
-    "rollup": "^2.23.0",
-    "typescript": "^4.3.5"
+    "@babel/eslint-parser": ">=7",
+    "eslint": ">=7",
+    "eslint-plugin-jest": ">=24",
+    "jest": ">=27",
+    "rollup": ">=2.23",
+    "typescript": ">=4.3"
   },
   "types": "./dist/index.d.ts",
   "jest": {
