@@ -23,10 +23,7 @@ jobs:
     - run: git config --global user.email "plmrry@gmail.com"
     - run: git config --global user.name "Paul Murray"
     - name: Set NPM version
-      uses: Reedyuk/NPM-Version@1.1.1
-      with:
-        version: '${{ github.event.inputs.version }}'
-        git-tag-version: 'true'
+      run: npm version ${{ github.event.inputs.version }}
     - run: git add package.json
     - run: git commit -m 'update to version {{ github.events.inputs.version }}'
     - run: git push
