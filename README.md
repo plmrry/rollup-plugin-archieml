@@ -35,7 +35,7 @@ export default {
 
 Then call `rollup` either via the [CLI](https://www.rollupjs.org/guide/en/#command-line-reference) or the [API](https://www.rollupjs.org/guide/en/#javascript-api).
 
-## Practical Example
+## Example
 
 Given an ArchieML file called `events.aml`:
 
