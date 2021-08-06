@@ -36,16 +36,16 @@
     "README.md"
   ],
   "dependencies": {
-    "@rollup/pluginutils": ">=3",
-    "archieml": ">=0.4"
+    "archieml": "0.4"
   },
   "devDependencies": {
-    "@babel/eslint-parser": ">=7",
-    "eslint": ">=7",
-    "eslint-plugin-jest": ">=24",
-    "jest": ">=27",
-    "rollup": ">=2.23",
-    "typescript": ">=4.3"
+    "@babel/eslint-parser": "7",
+    "@rollup/pluginutils": "4",
+    "eslint": "7",
+    "eslint-plugin-jest": "24",
+    "jest": "27",
+    "rollup": "2",
+    "typescript": "4"
   },
   "types": "./dist/index.d.ts",
   "jest": {
