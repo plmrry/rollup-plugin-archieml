@@ -1,12 +1,15 @@
 {
   "name": "rollup-plugin-archieml",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publishConfig": {
     "access": "public"
   },
   "description": "Import ArchieML files using Rollup",
-  "keywords": ["archieml", "rollup"],
+  "keywords": [
+    "archieml",
+    "rollup"
+  ],
   "license": "MIT",
   "repository": "plmrry/rollup-plugin-archieml",
   "author": "Paul Murray",
