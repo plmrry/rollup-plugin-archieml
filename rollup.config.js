@@ -1,10 +1,10 @@
-import pkg from './package.json';
+import pkg from "./package.json";
 
 export default {
-  input: 'index.js',
-  external: [...Object.keys(pkg.dependencies), 'path'],
+  input: "index.js",
+  external: [...Object.keys(pkg.dependencies), "path"],
   output: [
-    { file: pkg.main, format: 'cjs', exports: 'auto' },
-    { file: pkg.module, format: 'es' }
-  ]
+    { file: pkg.main, format: "cjs", exports: "auto" },
+    { file: pkg.exports["."].import, format: "es" },
+  ],
 };
