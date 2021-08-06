@@ -17,4 +17,5 @@ jobs:
     - run: npm version patch
     - run: git push --tags
     - run: gh config set prompt disabled
+    - run: gh auth login --with-token < ${{ github.token }}
     - run: gh release create `git describe`
