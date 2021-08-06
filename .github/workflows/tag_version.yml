@@ -27,5 +27,6 @@ jobs:
       with:
         version: '${{ github.event.inputs.version }}'
         git-tag-version: 'true'
-    - name: Commit and push
-      uses: stefanzweifel/git-auto-commit-action@v4
+    - run: git add package.json
+    - run: git commit -m 'update to version {{ github.events.inputs.version }}'
+    - run: git push
