@@ -15,24 +15,12 @@ jobs:
     - run: git config --global user.email "plmrry@gmail.com"
     - run: git config --global user.name "Paul Murray"
     - run: npm version patch
-  push:
-    needs: version
-    runs-on: ubuntu-latest
-    steps:
     - run: git push
     - run: git push --tags
-  release:
-    needs: push
-    runs-on: ubuntu-latest
-    steps:
     - run: gh config set prompt disabled
     - run: echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
     - run: gh release create `git describe --abbrev=0`
-  publish:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - run: npm install
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+    - run: npm install
+    - run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{secrets.npm_token}}
