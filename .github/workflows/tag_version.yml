@@ -1,20 +1,12 @@
 # This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Set Version
+name: Bump Patch Version
 
-on: 
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version'
-        required: true
+on: workflow_dispatch
 jobs:
   tag_version:
     runs-on: ubuntu-latest
-    env:
-      GIT_AUTHOR_NAME: Paul Murray
-      GIT_AUTHOR_EMAIL: plmrry@gmail.com
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
@@ -23,5 +15,5 @@ jobs:
     - run: git config --global user.email "plmrry@gmail.com"
     - run: git config --global user.name "Paul Murray"
     - name: Set NPM version
-      run: npm version ${{ github.event.inputs.version }}
-    - run: git push
+      run: npm version patch
+    - run: git push --tags
