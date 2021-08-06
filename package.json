@@ -13,6 +13,10 @@
   "bugs": "https://github.com/plmrry/rollup-plugin-archieml/issues",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "exports": {
+    ".": "./dist/index.es.js",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "build": "npx tsc && rollup -c",
     "prebuild": "rm -rf dist",
