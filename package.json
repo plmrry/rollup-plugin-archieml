@@ -6,6 +6,7 @@
     "access": "public"
   },
   "description": "Import ArchieML files using Rollup",
+  "keywords": ["archieml", "rollup"],
   "license": "MIT",
   "repository": "plmrry/rollup-plugin-archieml",
   "author": "Paul Murray",
