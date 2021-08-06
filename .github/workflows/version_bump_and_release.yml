@@ -15,6 +15,7 @@ jobs:
     - run: git config --global user.email "plmrry@gmail.com"
     - run: git config --global user.name "Paul Murray"
     - run: npm version patch
+    - run: git push
     - run: git push --tags
     - run: gh config set prompt disabled
     - run: echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
