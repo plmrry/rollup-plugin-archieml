@@ -24,7 +24,7 @@ jobs:
     steps:
     - run: gh config set prompt disabled
     - run: echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
-    - run: gh release create `git describe`
+    - run: gh release create `git describe --abbrev=0`
   publish:
     needs: release
     steps:
