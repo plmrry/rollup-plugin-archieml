@@ -24,6 +24,4 @@ jobs:
     - run: git config --global user.name "Paul Murray"
     - name: Set NPM version
       run: npm version ${{ github.event.inputs.version }}
-    - run: git status
-    - run: git commit -A -m 'update to version {{ github.events.inputs.version }}'
     - run: git push
