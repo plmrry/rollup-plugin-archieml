@@ -14,8 +14,7 @@ jobs:
         node-version: 15
     - run: git config --global user.email "plmrry@gmail.com"
     - run: git config --global user.name "Paul Murray"
-    - name: Set NPM version
-      run: npm version patch
+    - run: npm version patch
     - run: git push --tags
     - run: gh config set prompt disabled
     - run: gh release create `git describe`
