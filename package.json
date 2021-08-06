@@ -28,7 +28,7 @@
     "build": "npx tsc && rollup -c",
     "prebuild": "rm -rf dist",
     "prepare": "npm run build",
-    "prerelease": "npm run build",
+    "prepublish": "npm run build",
     "pretest": "npm run build",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "release": "npm publish"
