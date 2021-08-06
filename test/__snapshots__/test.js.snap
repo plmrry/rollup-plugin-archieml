@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`converts an aml file 1`] = `
+Object {
+  "events": Array [
+    Object {
+      "type": "header",
+      "value": "My Birthday",
+    },
+    Object {
+      "type": "date",
+      "value": "August 20th, 1990",
+    },
+    Object {
+      "type": "text",
+      "value": "Here's a nice photo",
+    },
+    Object {
+      "type": "image",
+      "value": Object {
+        "alt": "Family Photo",
+        "members": Array [
+          "Dad",
+          "Mom",
+          "Me",
+        ],
+        "src": "http://example.com/photo.png",
+      },
+    },
+  ],
+}
+`;
