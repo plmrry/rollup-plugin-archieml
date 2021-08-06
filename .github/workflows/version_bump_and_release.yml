@@ -17,3 +17,5 @@ jobs:
     - name: Set NPM version
       run: npm version patch
     - run: git push --tags
+    - run: gh config set prompt disabled
+    - run: VERSION=`git describe` gh release create $VERSION
