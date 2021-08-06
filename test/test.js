@@ -2,7 +2,7 @@ import vm from "vm";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { rollup } from "rollup";
-import archieml from "../dist/index.es.js";
+import archieml from "..";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
