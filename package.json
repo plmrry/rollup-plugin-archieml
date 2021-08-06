@@ -1,0 +1,81 @@
+{
+  "name": "rollup-plugin-archieml",
+  "type": "module",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Import ArchieML files using Rollup",
+  "license": "MIT",
+  "repository": "plmrry/rollup-plugin-archieml",
+  "author": "Paul Murray",
+  "homepage": "https://github.com/plmrry/rollup-plugin-archieml#readme",
+  "bugs": "https://github.com/plmrry/rollup-plugin-archieml/issues",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "build": "npx tsc && rollup -c",
+    "prebuild": "rm -rf dist",
+    "prepare": "npm run build",
+    "prerelease": "npm run build",
+    "pretest": "npm run build",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
+  },
+  "files": [
+    "dist",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@rollup/pluginutils": "^3.1.0",
+    "archieml": ">=0.4.x"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.0",
+    "@types/node": "^16.4.13",
+    "eslint": "^7.32.0",
+    "eslint-plugin-jest": "^24.4.0",
+    "jest": "^27.0.6",
+    "rollup": "^2.23.0",
+    "typescript": "^4.3.5"
+  },
+  "types": "./dist/index.d.ts",
+  "jest": {
+    "transform": {},
+    "automock": false,
+    "clearMocks": true,
+    "verbose": true
+  },
+  "eslintConfig": {
+    "parser": "@babel/eslint-parser",
+    "plugins": [
+      "jest"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module",
+      "requireConfigFile": false
+    },
+    "env": {
+      "es2021": true,
+      "node": true,
+      "jest/globals": true
+    },
+    "rules": {
+      "no-undef": "error",
+      "no-use-before-define": [
+        "error",
+        "nofunc"
+      ],
+      "no-unused-vars": "warn",
+      "no-param-reassign": [
+        "warn",
+        {
+          "props": true
+        }
+      ],
+      "no-constant-condition": "warn"
+    }
+  }
+}
