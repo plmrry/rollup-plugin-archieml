@@ -22,3 +22,17 @@ test("converts an aml file", async () => {
   await mod.evaluate();
   expect(mod.namespace.default).toMatchSnapshot();
 });
+
+test.only("converts a dynamically imported aml file", async () => {
+  const bundle = await rollup({
+    input: `${__dirname}/fixtures/dynamic-import/index.js`,
+    plugins: [archieml()],
+  });
+  await bundle.write({
+    dir: `${__dirname}/.output`,
+    format: "esm",
+  });
+  const { default: getOutput } = await import(`${__dirname}/.output/index.js`);
+  const output = await getOutput();
+  expect(output).toMatchSnapshot();
+});

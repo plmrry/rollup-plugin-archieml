@@ -1,0 +1,16 @@
+[+events]
+  header: My Birthday
+  date: August 20th, 1990
+
+  Here's a nice photo
+
+  {.image}
+    src: http://example.com/photo.png
+    alt: Family Photo
+    [.members]
+      * Dad
+      * Mom
+      * Me
+    []
+  {}
+[]
