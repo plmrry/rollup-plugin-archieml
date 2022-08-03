@@ -36,14 +36,14 @@
     "README.md"
   ],
   "dependencies": {
-    "archieml": "^0.5.0"
+    "archieml": "0.5.0"
   },
   "devDependencies": {
-    "@rollup/pluginutils": "4",
-    "@types/estree": "^0.0.50",
-    "jest": "27",
-    "rollup": "2",
-    "typescript": "4"
+    "@rollup/pluginutils": "latest",
+    "@types/estree": "latest",
+    "jest": "latest",
+    "rollup": "latest",
+    "typescript": "latest"
   },
   "types": "./dist/index.d.ts",
   "jest": {
