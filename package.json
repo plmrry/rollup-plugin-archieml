@@ -36,14 +36,11 @@
     "README.md"
   ],
   "dependencies": {
-    "archieml": "0.4"
+    "archieml": "^0.5.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7",
     "@rollup/pluginutils": "4",
     "@types/estree": "^0.0.50",
-    "eslint": "7",
-    "eslint-plugin-jest": "24",
     "jest": "27",
     "rollup": "2",
     "typescript": "4"
@@ -54,36 +51,5 @@
     "automock": false,
     "clearMocks": true,
     "verbose": true
-  },
-  "eslintConfig": {
-    "parser": "@babel/eslint-parser",
-    "plugins": [
-      "jest"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2021,
-      "sourceType": "module",
-      "requireConfigFile": false
-    },
-    "env": {
-      "es2021": true,
-      "node": true,
-      "jest/globals": true
-    },
-    "rules": {
-      "no-undef": "error",
-      "no-use-before-define": [
-        "error",
-        "nofunc"
-      ],
-      "no-unused-vars": "warn",
-      "no-param-reassign": [
-        "warn",
-        {
-          "props": true
-        }
-      ],
-      "no-constant-condition": "warn"
-    }
   }
 }
