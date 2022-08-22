@@ -3,11 +3,10 @@
     "allowJs": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "lib": ["ESNext"],
     "module": "esnext",
     "moduleResolution": "node",
     "outDir": "dist",
-    "target": "es2021",
+    "target": "esnext"
   },
   "include": ["index.js"]
 }

@@ -41,9 +41,11 @@
   "devDependencies": {
     "@rollup/pluginutils": "latest",
     "@types/estree": "latest",
+    "@types/node": "latest",
     "jest": "latest",
     "rollup": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vite": "latest"
   },
   "types": "./dist/index.d.ts",
   "jest": {

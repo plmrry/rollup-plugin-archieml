@@ -5,7 +5,7 @@ import { archieml as amlParser } from "archieml";
 
 /**
  * @typedef {import('@rollup/pluginutils').FilterPattern} FilterPattern
- * @typedef {import('rollup').Plugin} Plugin
+ * @typedef {import('vite').Plugin} Plugin
  * @typedef {{ include?: FilterPattern; exclude?: FilterPattern }} RollupArchieMLOptions
  */
 
