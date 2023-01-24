@@ -36,10 +36,10 @@
     "README.md"
   ],
   "dependencies": {
-    "archieml": "0.5.0"
+    "archieml": "0.5.0",
+    "@rollup/pluginutils": "latest"
   },
   "devDependencies": {
-    "@rollup/pluginutils": "latest",
     "@types/estree": "latest",
     "@types/node": "latest",
     "jest": "latest",
