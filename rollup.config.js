@@ -1,4 +1,6 @@
-import pkg from "./package.json";
+import fs from "node:fs";
+
+const pkg = JSON.parse(fs.readFileSync("./package.json").toString());
 
 export default {
   input: "index.js",
